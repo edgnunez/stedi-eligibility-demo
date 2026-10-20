@@ -1,0 +1,88 @@
+{
+  "http_status": 200,
+  "body": {
+    "meta": {
+      "traceId": "01M5DHG05H3C9V18J0GQMD300D",
+      "outboundTraceId": "01M5DHG05H3C9V18J0GQMD300D"
+    },
+    "payerId": "87726",
+    "x12": "ISA*00*          *00*          *ZZ*STEDI          *01*117151744      *261020*2054*^*00501*501269150*0*T*`~GS*HB*STEDI*117151744*20261020*205422*1*X*005010X279A1~ST*271*0001*005010X279A1~BHT*0022*11*01M5DHG05H3C9V18J0GQMD300D*20260325*0901~HL*1**20*1~NM1*PR*2*UNITEDHEALTHCARE*****PI*87726~PER*IC**UR*WWW.UHCPROVIDER.COM~HL*2*1*21*1~NM1*1P*2*MEDICAL PROVIDER*****XX*1999999984~HL*3*2*22*0~NM1*IL*1*DOE*JANE****MI*UHCINACTIVE~N3*101 MAIN ST~N4*SACRAMENTO*CA*94203~DMG*D8*19710101*F~EB*6**30*********W~EB*X***********W~LS*2120~NM1*1P*2*MEDICAL PROVIDER*****XX*0001112223~LE*2120~SE*18*0001~GE*1*1~IEA*1*501269150~",
+    "payer": {
+      "name": {
+        "organization": "UNITEDHEALTHCARE"
+      },
+      "type": "PAYER",
+      "contacts": [
+        {
+          "urls": [
+            "WWW.UHCPROVIDER.COM"
+          ]
+        }
+      ],
+      "identification": "87726"
+    },
+    "provider": {
+      "name": {
+        "organization": "MEDICAL PROVIDER"
+      },
+      "type": "PROVIDER",
+      "npi": "1999999984"
+    },
+    "subscriber": {
+      "address": {
+        "addressLine1": "101 MAIN ST",
+        "city": "SACRAMENTO",
+        "state": "CA",
+        "postalCode": "94203"
+      },
+      "dateOfBirth": "1971-01-01",
+      "gender": "FEMALE",
+      "name": {
+        "person": {
+          "firstName": "JANE",
+          "lastName": "DOE"
+        }
+      },
+      "memberId": "UHCINACTIVE"
+    },
+    "plans": [
+      {
+        "benefits": {
+          "statuses": [
+            {
+              "coverageLevel": "INDIVIDUAL",
+              "network": {
+                "indicator": "IN_AND_OUT_OF_NETWORK"
+              },
+              "service": {
+                "value": "30",
+                "definition": "Health Benefit Plan Coverage",
+                "system": "STC"
+              },
+              "status": "INACTIVE"
+            }
+          ],
+          "healthCareFacility": [
+            {
+              "coverageLevel": "INDIVIDUAL",
+              "network": {
+                "indicator": "IN_AND_OUT_OF_NETWORK"
+              },
+              "relatedEntities": [
+                {
+                  "name": {
+                    "organization": "MEDICAL PROVIDER"
+                  },
+                  "type": "PROVIDER",
+                  "npi": "0001112223"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "id": "ec_01a15b18-00b0-736c-9912-d27f80196fad",
+    "eligibilitySearchId": "01a15b18-00b1-70f4-8430-a715e9d79ef6"
+  }
+}

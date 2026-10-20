@@ -1,0 +1,58 @@
+{
+  "http_status": 200,
+  "body": {
+    "meta": {
+      "traceId": "01M5DHG0QQJXJ3WBEXJ5VHC1QH",
+      "outboundTraceId": "01M5DHG0QQJXJ3WBEXJ5VHC1QH"
+    },
+    "payerId": "87726",
+    "x12": "ISA*00*          *00*          *ZZ*STEDI          *01*117151744      *261020*2054*^*00501*788973028*0*T*`~GS*HB*STEDI*117151744*20261020*205422*1*X*005010X279A1~ST*271*0001*005010X279A1~BHT*0022*11*01M5DHG0QQJXJ3WBEXJ5VHC1QH*20260325*0901~HL*1**20*1~NM1*PR*2*UNITEDHEALTHCARE*****PI*87726~PER*IC**UR*WWW.UHCPROVIDER.COM~HL*2*1*21*1~NM1*1P*2*MEDICAL PROVIDER*****XX*1999999984~HL*3*2*22*0~NM1*IL*1*DOE*JANE****MI*UHCAAA42~REF*6P*666777~REF*6P*666777~AAA*N**42*R~DMG*D8*20010101~SE*14*0001~GE*1*1~IEA*1*788973028~",
+    "payer": {
+      "name": {
+        "organization": "UNITEDHEALTHCARE"
+      },
+      "type": "PAYER",
+      "contacts": [
+        {
+          "urls": [
+            "WWW.UHCPROVIDER.COM"
+          ]
+        }
+      ],
+      "identification": "87726"
+    },
+    "provider": {
+      "name": {
+        "organization": "MEDICAL PROVIDER"
+      },
+      "type": "PROVIDER",
+      "npi": "1999999984"
+    },
+    "subscriber": {
+      "dateOfBirth": "2001-01-01",
+      "name": {
+        "person": {
+          "firstName": "JANE",
+          "lastName": "DOE"
+        }
+      },
+      "additionalInformation": {
+        "group": {
+          "number": "666777"
+        }
+      },
+      "memberId": "UHCAAA42"
+    },
+    "id": "ec_01a15b18-02f5-74dd-9998-a3d318badf05",
+    "errors": [
+      {
+        "code": "42",
+        "description": "Unable to Respond at Current Time",
+        "followupAction": "Resubmission Allowed",
+        "location": "SUBSCRIBER",
+        "possibleResolutions": "The payer can't respond to your request. This is typically a temporary issue with the payer's system, such as downtime, but it can also be an extended outage. We recommend retrying immediately and continuing to retry for up to 2 minutes. Learn more about our [recommended retry strategy](https://www.stedi.com/docs/healthcare/eligibility-troubleshooting#payer-connectivity-issues) for payer connectivity issues."
+      }
+    ],
+    "eligibilitySearchId": "01a15b18-02f6-74bf-b17e-ce687b7d61c6"
+  }
+}

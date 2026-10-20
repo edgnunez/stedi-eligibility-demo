@@ -1,0 +1,47 @@
+{
+  "http_status": 400,
+  "body": {
+    "message": "One of the participants in the request could not be identified. Check the payer ID, provider identifiers and member details against the payer's requirements.",
+    "meta": {
+      "traceId": "01M5DHG3DD461DWGRH9XEDCCSX",
+      "outboundTraceId": "01M5DHG3DD461DWGRH9XEDCCSX"
+    },
+    "payerId": "87726",
+    "x12": "ISA*00*          *00*          *ZZ*STEDI          *01*117151744      *261020*2054*^*00501*997131987*0*T*`~GS*HB*STEDI*117151744*20261020*205425*1*X*005010X279A1~ST*271*0001*005010X279A1~BHT*0022*11*01M5DHG3DD461DWGRH9XEDCCSX*20260325*0901~HL*1**20*1~NM1*PR*2*UNITEDHEALTHCARE*****PI*87726~AAA*N**79*C~HL*2*1*21*1~NM1*1P*2*MEDICAL PROVIDER*****XX*1999999984~HL*3*2*22*0~NM1*IL*1*DOE*JOHN****MI*UHCAAA79~DMG*D8*19700101~SE*11*0001~GE*1*1~IEA*1*997131987~",
+    "payer": {
+      "name": {
+        "organization": "UNITEDHEALTHCARE"
+      },
+      "type": "PAYER",
+      "identification": "87726"
+    },
+    "provider": {
+      "name": {
+        "organization": "MEDICAL PROVIDER"
+      },
+      "type": "PROVIDER",
+      "npi": "1999999984"
+    },
+    "subscriber": {
+      "dateOfBirth": "1970-01-01",
+      "name": {
+        "person": {
+          "firstName": "JOHN",
+          "lastName": "DOE"
+        }
+      },
+      "memberId": "UHCAAA79"
+    },
+    "id": "ec_01a15b18-0dac-72e8-a6b7-ba08bbba297c",
+    "errors": [
+      {
+        "code": "79",
+        "description": "Invalid Participant Identification",
+        "followupAction": "Please Correct and Resubmit",
+        "location": "PAYER",
+        "possibleResolutions": "There is a problem connecting with this payer. Contact Stedi support."
+      }
+    ],
+    "eligibilitySearchId": "01a15b18-0dad-73d0-a717-87056b401178"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "http_status": 400,
+  "body": {
+    "message": "One of the participants in the request could not be identified. Check the payer ID, provider identifiers and member details against the payer's requirements.",
+    "meta": {
+      "traceId": "01M5DHG3XYBTAWM5X2NE6G04FW",
+      "outboundTraceId": "01M5DHG3XYBTAWM5X2NE6G04FW"
+    },
+    "x12": "ISA*00*          *00*          *ZZ*STEDI          *01*117151744      *261020*2054*^*00501*099674325*0*T*`~GS*HB*STEDI*117151744*20261020*205426*1*X*005010X279A1~ST*271*0001*005010X279A1~BHT*0022*11*01M5DHG3XYBTAWM5X2NE6G04FW*20261020*205426~HL*1**20*0~AAA*N**79*C~NM1*PR*2*Test Payer*****PI*NOTAPAYER~SE*6*0001~GE*1*1~IEA*1*099674325~",
+    "payer": {
+      "name": {
+        "organization": "Test Payer"
+      },
+      "type": "PAYER",
+      "identification": "NOTAPAYER"
+    },
+    "id": "ec_01a15b18-0fbc-703e-a3b0-8a3b7b67ce04",
+    "errors": [
+      {
+        "code": "79",
+        "description": "Invalid Participant Identification",
+        "followupAction": "Please Correct and Resubmit",
+        "location": "ENVELOPE",
+        "possibleResolutions": "There is a problem connecting with this payer. Contact Stedi support."
+      }
+    ],
+    "eligibilitySearchId": "01a15b18-0fbd-705c-a891-8f11b680fed0"
+  }
+}

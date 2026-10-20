@@ -1,0 +1,53 @@
+{
+  "http_status": 200,
+  "body": {
+    "meta": {
+      "traceId": "01M5DHG1WRVNPXWQVPA6G6DNAA",
+      "outboundTraceId": "01M5DHG1WRVNPXWQVPA6G6DNAA"
+    },
+    "payerId": "87726",
+    "x12": "ISA*00*          *00*          *ZZ*STEDI          *01*117151744      *261020*2054*^*00501*735760887*0*T*`~GS*HB*STEDI*117151744*20261020*205424*1*X*005010X279A1~ST*271*0001*005010X279A1~BHT*0022*11*01M5DHG1WRVNPXWQVPA6G6DNAA*20260325*0901~HL*1**20*1~NM1*PR*2*UNITEDHEALTHCARE*****PI*87726~PER*IC**UR*WWW.UHCPROVIDER.COM~HL*2*1*21*1~NM1*1P*2*MEDICAL PROVIDER*****XX*1999999984~HL*3*2*22*0~NM1*IL*1*DOE*JOHN****MI*UHCAAA72~AAA*N**72*C~DMG*D8*19900101~SE*12*0001~GE*1*1~IEA*1*735760887~",
+    "payer": {
+      "name": {
+        "organization": "UNITEDHEALTHCARE"
+      },
+      "type": "PAYER",
+      "contacts": [
+        {
+          "urls": [
+            "WWW.UHCPROVIDER.COM"
+          ]
+        }
+      ],
+      "identification": "87726"
+    },
+    "provider": {
+      "name": {
+        "organization": "MEDICAL PROVIDER"
+      },
+      "type": "PROVIDER",
+      "npi": "1999999984"
+    },
+    "subscriber": {
+      "dateOfBirth": "1990-01-01",
+      "name": {
+        "person": {
+          "firstName": "JOHN",
+          "lastName": "DOE"
+        }
+      },
+      "memberId": "UHCAAA72"
+    },
+    "id": "ec_01a15b18-078a-7067-8887-2e370370dc1e",
+    "errors": [
+      {
+        "code": "72",
+        "description": "Invalid/Missing Subscriber/Insured ID",
+        "followupAction": "Please Correct and Resubmit",
+        "location": "SUBSCRIBER",
+        "possibleResolutions": "The subscriber's member ID is either missing or invalid.\n\u2022 Check the `subscriber.memberId`.\n\u2022 Ensure the member ID doesn't include the [Card Issuer Identifier](https://www.stedi.com/docs/healthcare/eligibility-troubleshooting#card-issuer-identifier-80840).\n\u2022 If you can't locate the correct member ID, try running an [insurance discovery check](https://www.stedi.com/docs/healthcare/insurance-discovery) to retrieve the patient's benefits information instead."
+      }
+    ],
+    "eligibilitySearchId": "01a15b18-078b-7254-bf8f-0951bda35e1b"
+  }
+}

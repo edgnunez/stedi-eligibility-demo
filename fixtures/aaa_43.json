@@ -1,0 +1,46 @@
+{
+  "http_status": 200,
+  "body": {
+    "meta": {
+      "traceId": "01M5DHG18JEZH8YXT42035T85M",
+      "outboundTraceId": "01M5DHG18JEZH8YXT42035T85M"
+    },
+    "payerId": "87726",
+    "x12": "ISA*00*          *00*          *ZZ*STEDI          *01*117151744      *261020*2054*^*00501*552668718*0*T*`~GS*HB*STEDI*117151744*20261020*205423*1*X*005010X279A1~ST*271*0001*005010X279A1~BHT*0022*11*01M5DHG18JEZH8YXT42035T85M*20260325*0901~HL*1**20*1~NM1*PR*2*UNITEDHEALTHCARE*****PI*87726~HL*2*1*21*1~NM1*1P*2*MEDICAL PROVIDER*****XX*1999999984~AAA*N**43*C~HL*3*2*22*0~NM1*IL*1*DOE*JANE****MI*UHCAAA43~DMG*D8*19700101~SE*11*0001~GE*1*1~IEA*1*552668718~",
+    "payer": {
+      "name": {
+        "organization": "UNITEDHEALTHCARE"
+      },
+      "type": "PAYER",
+      "identification": "87726"
+    },
+    "provider": {
+      "name": {
+        "organization": "MEDICAL PROVIDER"
+      },
+      "type": "PROVIDER",
+      "npi": "1999999984"
+    },
+    "subscriber": {
+      "dateOfBirth": "1970-01-01",
+      "name": {
+        "person": {
+          "firstName": "JANE",
+          "lastName": "DOE"
+        }
+      },
+      "memberId": "UHCAAA43"
+    },
+    "id": "ec_01a15b18-0511-74d3-ae50-31d372ec8fd0",
+    "errors": [
+      {
+        "code": "43",
+        "description": "Invalid/Missing Provider Identification",
+        "followupAction": "Please Correct and Resubmit",
+        "location": "PROVIDER",
+        "possibleResolutions": "The problem is either:\n\u2022 The `provider.npi` isn't registered correctly with the payer.\n\u2022 The payer requires an agreement to begin processing eligibility checks for this provider.\n\nCheck the [Payer Network](https://www.stedi.com/healthcare/network) to determine whether this payer requires transaction enrollment for eligibility checks.\n\u2022 If yes, you must submit a [transaction enrollment request](https://www.stedi.com/docs/healthcare/transaction-enrollment) for the provider.\n\u2022 If not, the payer may still require other [credentialing or enrollment processes](https://www.stedi.com/docs/healthcare/credentialing-and-enrollment)."
+      }
+    ],
+    "eligibilitySearchId": "01a15b18-0512-77e2-9fd1-90f821541c89"
+  }
+}
