@@ -1,0 +1,887 @@
+{
+  "meta": {
+    "traceId": "01M5D5RGPBMHSDWZXC9ZJP616T",
+    "outboundTraceId": "01M5D5RGPBMHSDWZXC9ZJP616T"
+  },
+  "payerId": "87726",
+  "x12": "ISA*00*          *00*          *ZZ*STEDI          *01*117151744      *261020*1729*^*00501*066037582*0*T*`~GS*HB*STEDI*117151744*20261020*172918*1*X*005010X279A1~ST*271*0001*005010X279A1~BHT*0022*11*01M5D5RGPBMHSDWZXC9ZJP616T*20260325*0901~HL*1**20*1~NM1*PR*2*UNITEDHEALTHCARE*****PI*87726~PER*IC**UR*WWW.UHCPROVIDER.COM~HL*2*1*21*1~NM1*1P*2*CALIFORNIA MEDICAL PROVIDER*****XX*1999999984~HL*3*2*22*0~NM1*IL*1*DOE*JANE*D***MI*UHC123456~REF*6P*111222~REF*6P*111222~N3*101 MAIN ST~N4*SACRAMENTO*CA*94203~DMG*D8*19710101*F~DTP*346*D8*20240101~EB*1**30*C1*Gold Plan HMO******Y*W~MSG*PCP TO SUBMIT A SPECIALIST REFERRAL~LS*2120~NM1*PR*2*UNITEDHEALTHCARE*****PI*87726~LE*2120~EB*C*IND*30***29*0*****Y~EB*G*FAM*30*C1**23*3000*****Y~EB*C*FAM*30***29*0*****Y~EB*G*FAM*30*C1**24*925*****Y~EB*G*IND*30*C1**23*1500*****Y~EB*G*FAM*30*C1**29*2200*****Y~EB*G*IND*30*C1**24*650*****Y~EB*G*IND*30*C1**29*850*****Y~EB*L***********W~LS*2120~NM1*P3*1*DOUGH*JOHN*L***XX*3334445556~N3*202 MAIN ST~N4*SACRAMENTO*CA*94203~LE*2120~EB*1**PT*********Y~MSG*REHABILITATIVE~EB*1**PT*********Y~MSG*HABILITATIVE~EB*1**33*********Y~MSG*VARIED BENEFIT.REFER TO PLAN EVIDENCE OF COVERAGE FOR BENEFITS AND LIMITATIONS~EB*1**96*********Y~MSG*SPECIALIST~MSG*OUTPATIENT MATERNITY~EB*1**86*********Y~MSG*COPAY WAIVED IF ADMITTED~EB*1**BZ*********Y~MSG*OUTPATIENT PERIODIC HEALTH EVALUATION~EB*1**1^AL^48^35^47^50^MH^BZ^BY^UC*********Y~EB*1**96*********Y~MSG*SPECIALIST~EB*A*IND*BZ***27**0****Y~MSG*OUTPATIENT PERIODIC HEALTH EVALUATION~EB*A*IND*UC^48^BZ^BY^50***27**0****Y~EB*A*IND*PT***27**0****Y~MSG*REHABILITATIVE~EB*A*IND*33***27**0****Y~MSG*VARIED BENEFIT.REFER TO PLAN EVIDENCE OF COVERAGE FOR BENEFITS AND LIMITATIONS~EB*A*IND*96***27**0****Y~MSG*SPECIALIST~EB*A*IND*PT***27**0****Y~MSG*HABILITATIVE~EB*A*IND*86***27**0****Y~MSG*COPAY WAIVED IF ADMITTED~EB*A*IND*96***27**0****Y~MSG*SPECIALIST~MSG*OUTPATIENT MATERNITY~EB*B*IND*96***27*15*****Y~MSG*SPECIALIST~EB*B*IND*96***27*0*****Y~MSG*SPECIALIST~MSG*OUTPATIENT MATERNITY~EB*B*IND*PT***27*15*****Y~MSG*HABILITATIVE~EB*B*IND*BZ***27*0*****Y~MSG*OUTPATIENT PERIODIC HEALTH EVALUATION~EB*B*IND*BY^BZ^UC***27*15*****Y~EB*B*IND*48^50***27*0*****Y~EB*B*IND*33***27*15*****Y~MSG*VARIED BENEFIT.REFER TO PLAN EVIDENCE OF COVERAGE FOR BENEFITS AND LIMITATIONS~EB*B*IND*86***27*50*****Y~MSG*COPAY WAIVED IF ADMITTED~EB*B*IND*PT***27*15*****Y~MSG*REHABILITATIVE~EB*U**88*********W~LS*2120~NM1*VN*2*OPTUMRX~PER*IC**UR*PROFESSIONALS.OPTUMRX.COM~LE*2120~EB*X***********W~LS*2120~NM1*FA*2*DIRECTED BY PRIMARY MD~LE*2120~EB*N***********W~LS*2120~NM1*13*2*MEDICAL FACILITY SACRAMENTO~N3*202 MAIN ST~N4*SACRAMENTO*CA*94203~LE*2120~SE*99*0001~GE*1*1~IEA*1*066037582~",
+  "payer": {
+    "name": {
+      "organization": "UNITEDHEALTHCARE"
+    },
+    "type": "PAYER",
+    "contacts": [
+      {
+        "urls": [
+          "WWW.UHCPROVIDER.COM"
+        ]
+      }
+    ],
+    "identification": "87726"
+  },
+  "provider": {
+    "name": {
+      "organization": "CALIFORNIA MEDICAL PROVIDER"
+    },
+    "type": "PROVIDER",
+    "npi": "1999999984"
+  },
+  "subscriber": {
+    "address": {
+      "addressLine1": "101 MAIN ST",
+      "city": "SACRAMENTO",
+      "state": "CA",
+      "postalCode": "94203"
+    },
+    "dates": {
+      "plan": {
+        "start": "2024-01-01"
+      }
+    },
+    "dateOfBirth": "1971-01-01",
+    "gender": "FEMALE",
+    "name": {
+      "person": {
+        "firstName": "JANE",
+        "lastName": "DOE",
+        "middleName": "D"
+      }
+    },
+    "additionalInformation": {
+      "group": {
+        "number": "111222"
+      }
+    },
+    "memberId": "UHC123456"
+  },
+  "plans": [
+    {
+      "benefits": {
+        "statuses": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "COMMERCIAL",
+            "network": {
+              "indicator": "IN_AND_OUT_OF_NETWORK"
+            },
+            "priorAuthIndicator": "REQUIRED",
+            "service": {
+              "value": "30",
+              "definition": "Health Benefit Plan Coverage",
+              "system": "STC"
+            },
+            "messages": [
+              "PCP TO SUBMIT A SPECIALIST REFERRAL"
+            ],
+            "relatedEntities": [
+              {
+                "name": {
+                  "organization": "UNITEDHEALTHCARE"
+                },
+                "type": "PAYER",
+                "payerId": "87726"
+              }
+            ],
+            "planCoverageDescription": "Gold Plan HMO",
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "PT",
+              "definition": "Physical Therapy",
+              "system": "STC"
+            },
+            "messages": [
+              "REHABILITATIVE"
+            ],
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "PT",
+              "definition": "Physical Therapy",
+              "system": "STC"
+            },
+            "messages": [
+              "HABILITATIVE"
+            ],
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "33",
+              "definition": "Chiropractic",
+              "system": "STC"
+            },
+            "messages": [
+              "VARIED BENEFIT.REFER TO PLAN EVIDENCE OF COVERAGE FOR BENEFITS AND LIMITATIONS"
+            ],
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "96",
+              "definition": "Professional (Physician)",
+              "system": "STC"
+            },
+            "messages": [
+              "SPECIALIST",
+              "OUTPATIENT MATERNITY"
+            ],
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "86",
+              "definition": "Emergency Services",
+              "system": "STC"
+            },
+            "messages": [
+              "COPAY WAIVED IF ADMITTED"
+            ],
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "BZ",
+              "definition": "Physician Visit - Office: Well",
+              "system": "STC"
+            },
+            "messages": [
+              "OUTPATIENT PERIODIC HEALTH EVALUATION"
+            ],
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "1",
+              "definition": "Medical Care",
+              "system": "STC"
+            },
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "AL",
+              "definition": "Vision (Optometry)",
+              "system": "STC"
+            },
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "48",
+              "definition": "Hospital - Inpatient",
+              "system": "STC"
+            },
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "35",
+              "definition": "Dental Care",
+              "system": "STC"
+            },
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "47",
+              "definition": "Hospital",
+              "system": "STC"
+            },
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "50",
+              "definition": "Hospital - Outpatient",
+              "system": "STC"
+            },
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "MH",
+              "definition": "Mental Health",
+              "system": "STC"
+            },
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "BZ",
+              "definition": "Physician Visit - Office: Well",
+              "system": "STC"
+            },
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "BY",
+              "definition": "Physician Visit - Office: Sick",
+              "system": "STC"
+            },
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "UC",
+              "definition": "Urgent Care",
+              "system": "STC"
+            },
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "96",
+              "definition": "Professional (Physician)",
+              "system": "STC"
+            },
+            "messages": [
+              "SPECIALIST"
+            ],
+            "status": "ACTIVE_COVERAGE"
+          }
+        ],
+        "coInsurance": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "BZ",
+              "definition": "Physician Visit - Office: Well",
+              "system": "STC"
+            },
+            "messages": [
+              "OUTPATIENT PERIODIC HEALTH EVALUATION"
+            ],
+            "timePeriod": "VISIT",
+            "percent": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "UC",
+              "definition": "Urgent Care",
+              "system": "STC"
+            },
+            "timePeriod": "VISIT",
+            "percent": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "48",
+              "definition": "Hospital - Inpatient",
+              "system": "STC"
+            },
+            "timePeriod": "VISIT",
+            "percent": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "BZ",
+              "definition": "Physician Visit - Office: Well",
+              "system": "STC"
+            },
+            "timePeriod": "VISIT",
+            "percent": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "BY",
+              "definition": "Physician Visit - Office: Sick",
+              "system": "STC"
+            },
+            "timePeriod": "VISIT",
+            "percent": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "50",
+              "definition": "Hospital - Outpatient",
+              "system": "STC"
+            },
+            "timePeriod": "VISIT",
+            "percent": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "PT",
+              "definition": "Physical Therapy",
+              "system": "STC"
+            },
+            "messages": [
+              "REHABILITATIVE"
+            ],
+            "timePeriod": "VISIT",
+            "percent": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "33",
+              "definition": "Chiropractic",
+              "system": "STC"
+            },
+            "messages": [
+              "VARIED BENEFIT.REFER TO PLAN EVIDENCE OF COVERAGE FOR BENEFITS AND LIMITATIONS"
+            ],
+            "timePeriod": "VISIT",
+            "percent": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "96",
+              "definition": "Professional (Physician)",
+              "system": "STC"
+            },
+            "messages": [
+              "SPECIALIST"
+            ],
+            "timePeriod": "VISIT",
+            "percent": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "PT",
+              "definition": "Physical Therapy",
+              "system": "STC"
+            },
+            "messages": [
+              "HABILITATIVE"
+            ],
+            "timePeriod": "VISIT",
+            "percent": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "86",
+              "definition": "Emergency Services",
+              "system": "STC"
+            },
+            "messages": [
+              "COPAY WAIVED IF ADMITTED"
+            ],
+            "timePeriod": "VISIT",
+            "percent": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "96",
+              "definition": "Professional (Physician)",
+              "system": "STC"
+            },
+            "messages": [
+              "SPECIALIST",
+              "OUTPATIENT MATERNITY"
+            ],
+            "timePeriod": "VISIT",
+            "percent": "0"
+          }
+        ],
+        "coPayment": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "96",
+              "definition": "Professional (Physician)",
+              "system": "STC"
+            },
+            "messages": [
+              "SPECIALIST"
+            ],
+            "timePeriod": "VISIT",
+            "amount": "15"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "96",
+              "definition": "Professional (Physician)",
+              "system": "STC"
+            },
+            "messages": [
+              "SPECIALIST",
+              "OUTPATIENT MATERNITY"
+            ],
+            "timePeriod": "VISIT",
+            "amount": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "PT",
+              "definition": "Physical Therapy",
+              "system": "STC"
+            },
+            "messages": [
+              "HABILITATIVE"
+            ],
+            "timePeriod": "VISIT",
+            "amount": "15"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "BZ",
+              "definition": "Physician Visit - Office: Well",
+              "system": "STC"
+            },
+            "messages": [
+              "OUTPATIENT PERIODIC HEALTH EVALUATION"
+            ],
+            "timePeriod": "VISIT",
+            "amount": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "BY",
+              "definition": "Physician Visit - Office: Sick",
+              "system": "STC"
+            },
+            "timePeriod": "VISIT",
+            "amount": "15"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "BZ",
+              "definition": "Physician Visit - Office: Well",
+              "system": "STC"
+            },
+            "timePeriod": "VISIT",
+            "amount": "15"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "UC",
+              "definition": "Urgent Care",
+              "system": "STC"
+            },
+            "timePeriod": "VISIT",
+            "amount": "15"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "48",
+              "definition": "Hospital - Inpatient",
+              "system": "STC"
+            },
+            "timePeriod": "VISIT",
+            "amount": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "50",
+              "definition": "Hospital - Outpatient",
+              "system": "STC"
+            },
+            "timePeriod": "VISIT",
+            "amount": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "33",
+              "definition": "Chiropractic",
+              "system": "STC"
+            },
+            "messages": [
+              "VARIED BENEFIT.REFER TO PLAN EVIDENCE OF COVERAGE FOR BENEFITS AND LIMITATIONS"
+            ],
+            "timePeriod": "VISIT",
+            "amount": "15"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "86",
+              "definition": "Emergency Services",
+              "system": "STC"
+            },
+            "messages": [
+              "COPAY WAIVED IF ADMITTED"
+            ],
+            "timePeriod": "VISIT",
+            "amount": "50"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "PT",
+              "definition": "Physical Therapy",
+              "system": "STC"
+            },
+            "messages": [
+              "REHABILITATIVE"
+            ],
+            "timePeriod": "VISIT",
+            "amount": "15"
+          }
+        ],
+        "deductible": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "30",
+              "definition": "Health Benefit Plan Coverage",
+              "system": "STC"
+            },
+            "timePeriod": "REMAINING",
+            "amount": "0"
+          },
+          {
+            "coverageLevel": "FAMILY",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "30",
+              "definition": "Health Benefit Plan Coverage",
+              "system": "STC"
+            },
+            "timePeriod": "REMAINING",
+            "amount": "0"
+          }
+        ],
+        "outOfPocket": [
+          {
+            "coverageLevel": "FAMILY",
+            "insuranceType": "COMMERCIAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "30",
+              "definition": "Health Benefit Plan Coverage",
+              "system": "STC"
+            },
+            "timePeriod": "CALENDAR_YEAR",
+            "amount": "3000"
+          },
+          {
+            "coverageLevel": "FAMILY",
+            "insuranceType": "COMMERCIAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "30",
+              "definition": "Health Benefit Plan Coverage",
+              "system": "STC"
+            },
+            "timePeriod": "YEAR_TO_DATE",
+            "amount": "925"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "COMMERCIAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "30",
+              "definition": "Health Benefit Plan Coverage",
+              "system": "STC"
+            },
+            "timePeriod": "CALENDAR_YEAR",
+            "amount": "1500"
+          },
+          {
+            "coverageLevel": "FAMILY",
+            "insuranceType": "COMMERCIAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "30",
+              "definition": "Health Benefit Plan Coverage",
+              "system": "STC"
+            },
+            "timePeriod": "REMAINING",
+            "amount": "2200"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "COMMERCIAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "30",
+              "definition": "Health Benefit Plan Coverage",
+              "system": "STC"
+            },
+            "timePeriod": "YEAR_TO_DATE",
+            "amount": "650"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "COMMERCIAL",
+            "network": {
+              "indicator": "IN_NETWORK"
+            },
+            "service": {
+              "value": "30",
+              "definition": "Health Benefit Plan Coverage",
+              "system": "STC"
+            },
+            "timePeriod": "REMAINING",
+            "amount": "850"
+          }
+        ],
+        "primaryCareProvider": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_AND_OUT_OF_NETWORK"
+            },
+            "relatedEntities": [
+              {
+                "name": {
+                  "person": {
+                    "firstName": "JOHN",
+                    "lastName": "DOUGH",
+                    "middleName": "L"
+                  }
+                },
+                "type": "PRIMARY_CARE_PROVIDER",
+                "address": {
+                  "addressLine1": "202 MAIN ST",
+                  "city": "SACRAMENTO",
+                  "state": "CA",
+                  "postalCode": "94203"
+                },
+                "npi": "3334445556"
+              }
+            ]
+          }
+        ],
+        "servicesRestrictedToFollowingProvider": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_AND_OUT_OF_NETWORK"
+            },
+            "relatedEntities": [
+              {
+                "name": {
+                  "organization": "MEDICAL FACILITY SACRAMENTO"
+                },
+                "type": "CONTRACTED_SERVICE_PROVIDER",
+                "address": {
+                  "addressLine1": "202 MAIN ST",
+                  "city": "SACRAMENTO",
+                  "state": "CA",
+                  "postalCode": "94203"
+                }
+              }
+            ]
+          }
+        ],
+        "contactFollowingEntityForInformation": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_AND_OUT_OF_NETWORK"
+            },
+            "service": {
+              "value": "88",
+              "definition": "Pharmacy",
+              "system": "STC"
+            },
+            "relatedEntities": [
+              {
+                "name": {
+                  "organization": "OPTUMRX"
+                },
+                "type": "VENDOR",
+                "contacts": [
+                  {
+                    "urls": [
+                      "PROFESSIONALS.OPTUMRX.COM"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "healthCareFacility": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {
+              "indicator": "IN_AND_OUT_OF_NETWORK"
+            },
+            "relatedEntities": [
+              {
+                "name": {
+                  "organization": "DIRECTED BY PRIMARY MD"
+                },
+                "type": "FACILITY"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "id": "ec_01a15a5c-42c7-7141-85d5-298ea31a918b",
+  "eligibilitySearchId": "01a15a5c-42ca-7625-a888-b86fc43dd814"
+}
