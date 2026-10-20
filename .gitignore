@@ -1,11 +1,13 @@
 # Secrets: never commit
 .env
+API key.txt
 
 # Python
 __pycache__/
 *.pyc
 .venv/
 venv/
+.pytest_cache/
 
 # Editors / OS
 .vscode/

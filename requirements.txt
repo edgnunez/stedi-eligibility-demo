@@ -1,2 +1,5 @@
 httpx>=0.27
 python-dotenv>=1.0
+
+# development only
+pytest>=8.0
