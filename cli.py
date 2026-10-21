@@ -40,8 +40,6 @@ def cmd_check(args: argparse.Namespace) -> int:
             print(exc, file=sys.stderr)
             return 1
     else:
-        load_dotenv()
-
         def on_retry(attempt: int, delay: float, errors: list) -> None:
             codes = ", ".join(e.get("code", "?") for e in errors)
             print(f"  Payer temporarily unavailable (AAA {codes}). "
@@ -70,6 +68,7 @@ def cmd_check(args: argparse.Namespace) -> int:
 
 
 def main(argv: list[str] | None = None) -> int:
+    load_dotenv()
     # Payer text can include characters a Windows console can't show; don't crash on them.
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(errors="replace")

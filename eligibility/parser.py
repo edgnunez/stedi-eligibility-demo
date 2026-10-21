@@ -119,7 +119,8 @@ def _plan_status_entry(statuses: list[dict]) -> dict:
 
 def _is_active(status: str | None) -> bool | None:
     # X12 EB01 codes 1-5 are "active" variants and 6-8 are "inactive" variants.
-    # We confirm the exact inactive string against the uhc-inactive mock in step 4.
+    # Stedi sends these as strings such as ACTIVE_COVERAGE and INACTIVE (see the
+    # uhc-active and uhc-inactive fixtures), so we match on the prefix.
     if not status:
         return None
     if status.startswith("INACTIVE"):
