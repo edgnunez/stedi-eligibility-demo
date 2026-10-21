@@ -12,11 +12,13 @@ from __future__ import annotations
 import json
 import time
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable
 
 from eligibility.client import RequestRejected
 from eligibility.rejections import errors_from_body, should_retry
+
 
 FIXTURES = Path(__file__).resolve().parent.parent / "fixtures"
 
@@ -27,6 +29,8 @@ class CheckResult:
     body: dict
     attempts: int = 1
     source: str = "live"  # "live" or "fixture"
+    checked_at: datetime | None = None    # when the payer answered (UTC)
+    elapsed_seconds: float | None = None  # total time including retries
 
 
 def run_check(
@@ -38,11 +42,17 @@ def run_check(
     max_delay: float = 30.0,
     sleep: Callable[[float], None] = time.sleep,
     clock: Callable[[], float] = time.monotonic,
+    now: Callable[[], datetime] = lambda: datetime.now(timezone.utc),
     on_retry: Callable[[int, float, list], None] | None = None,
 ) -> CheckResult:
     start = clock()
     delay = first_delay
     attempt = 0
+    
+    def finish() -> CheckResult:
+        return CheckResult(status, body, attempt,
+                           checked_at=now(),
+                           elapsed_seconds=round(clock() - start, 3))
     while True:
         attempt += 1
         try:
@@ -56,9 +66,9 @@ def run_check(
 
         errors = errors_from_body(body)
         if not should_retry(errors):
-            return CheckResult(status, body, attempt)
+            return finish()
         if clock() - start + delay > retry_seconds:
-            return CheckResult(status, body, attempt)  # out of time: report it
+            return finish()  # out of time: report it
         if on_retry:
             on_retry(attempt, delay, errors)
         sleep(delay)

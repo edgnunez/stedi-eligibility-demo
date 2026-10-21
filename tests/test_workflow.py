@@ -1,9 +1,11 @@
 """The retry loop and offline loading. A fake client and a fake clock make
 the 2-minute retry window testable in milliseconds."""
 import pytest
+from datetime import datetime, timezone
 
 from eligibility.client import RequestRejected
 from eligibility.workflow import load_fixture, run_check
+
 
 ACTIVE = {"id": "ec_ok", "plans": []}
 PAYER_DOWN = {"errors": [{"code": "42", "followupAction": "Resubmission Allowed"}]}
@@ -86,3 +88,20 @@ def test_load_fixture_handles_both_formats():
 def test_missing_fixture_explains_how_to_record_it():
     with pytest.raises(FileNotFoundError, match="record_fixtures.py cigna-active"):
         load_fixture("cigna-active")
+
+        
+def test_result_records_time_and_duration():
+    fixed_now = datetime(2026, 10, 21, 14, 0, tzinfo=timezone.utc)
+    ticks = iter([100.0, 101.5])  # start, then finish
+
+    client = FakeClient(ACTIVE)
+    result = run_check(
+        client,
+        {},
+        clock=lambda: next(ticks),
+        now=lambda: fixed_now,
+    )
+
+    assert client.calls == 1  # no retry happened
+    assert result.checked_at == fixed_now
+    assert result.elapsed_seconds == 1.5
