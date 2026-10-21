@@ -94,9 +94,11 @@ def label(key: str | None) -> str:
 
 # --- Top-level render ----------------------------------------------------------
 
-def render(result: CheckResult, raw: bool = False) -> str:
+def render(result: CheckResult, raw: bool = False, *,
+           summary: EligibilitySummary | None = None) -> str:
     body = result.body or {}
-    summary = parse_eligibility(body)
+    if summary is None:
+        summary = parse_eligibility(body)
     errors = errors_from_body(body)
 
     parts = [_header(result, summary)]

@@ -18,6 +18,7 @@ from eligibility.client import AuthError, EligibilityClient, RequestRejected, St
 from eligibility.display import render
 from eligibility.scenarios import SCENARIOS
 from eligibility.workflow import fixture_path, load_fixture, run_check
+from eligibility.parser import parse_eligibility
 
 
 def cmd_list() -> int:
@@ -63,7 +64,8 @@ def cmd_check(args: argparse.Namespace) -> int:
             print(f"Unexpected error: {exc}", file=sys.stderr)
             return 1
 
-    print(render(result, raw=args.raw))
+    summary = parse_eligibility(result.body or {})
+    print(render(result, raw=args.raw, summary=summary))
     return 0
 
 
