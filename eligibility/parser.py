@@ -55,6 +55,8 @@ class EligibilitySummary:
     cost_shares: list[CostShare]
     rejections: list[dict]       # raw AAA errors; explained in rejections.py
     invalid_entry_count: int     # entries Stedi flagged as not matching their type
+    plan_messages: list[str] = field(default_factory=list)  # free text on the plan status
+    prior_auth: str | None = None  # REQUIRED / NOT_REQUIRED on the plan status, if sent
 
     def find(
         self,
@@ -102,6 +104,8 @@ def parse_eligibility(body: dict) -> EligibilitySummary:
         invalid_entry_count=sum(
             len(v) for v in (benefits.get("invalidEntries") or {}).values()
         ),
+        plan_messages=list(status_entry.get("messages") or []),
+        prior_auth=status_entry.get("priorAuthIndicator"),
     )
 
 
